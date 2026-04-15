@@ -131,3 +131,85 @@ $$
 | `\alpha, \beta, \theta`           | Greek letters     | Variables      |
 | `\begin{bmatrix}...\end{bmatrix}` | Matrix            | Linear algebra |
 | `\begin{aligned}...\end{aligned}` | Aligned equations | Systems        |
+
+## Diagrams / Charts with Mermaid (Optional Setup Required)
+
+Starlight doesn't render Mermaid diagrams by default. If your course uses diagrams, flowcharts, or charts, you can enable it with the [`astro-mermaid`](https://github.com/joesaby/astro-mermaid) integration — see the [README setup instructions](https://github.com/yourusername/your-notes-repo#diagrams--charts-with-mermaid-optional) for details.
+
+### Live Examples
+
+If Mermaid is set up correctly, you should see rendered diagrams below — not raw text.
+
+**Flowchart:**
+
+```mermaid
+graph TD
+    A[Start] --> B{Decision}
+    B -->|Yes| C[Do something]
+    B -->|No| D[Do something else]
+    C --> E[End]
+    D --> E
+```
+
+**Pie chart:**
+
+```mermaid
+pie title Grade Distribution
+    "A" : 30
+    "B" : 40
+    "C" : 20
+    "D/F" : 10
+```
+
+**Bar chart:**
+
+```mermaid
+xychart-beta
+    title "Exam Scores by Unit"
+    x-axis [Unit 1, Unit 2, Unit 3, Unit 4, Unit 5]
+    y-axis "Score (%)" 0 --> 100
+    bar [82, 91, 74, 88, 95]
+```
+
+**Sequence diagram:**
+
+```mermaid
+sequenceDiagram
+    participant C as Client
+    participant S as Server
+    participant D as Database
+    C->>S: HTTP Request
+    S->>D: Query
+    D-->>S: Results
+    S-->>C: JSON Response
+```
+
+:::note
+If the diagrams above show raw text instead of rendered graphics, Mermaid is not set up yet. See the README for installation steps.
+:::
+
+### Syntax Reference
+
+Write diagrams inside fenced code blocks with the `mermaid` language identifier:
+
+````markdown
+```mermaid
+graph TD
+    A[Start] --> B[End]
+```
+````
+
+**Common diagram types:**
+
+| Type                | Keyword           | Use for                               |
+| ------------------- | ----------------- | ------------------------------------- |
+| Flowchart           | `graph TD`        | Processes, algorithms, decision trees |
+| Pie chart           | `pie`             | Proportions, distributions            |
+| Bar chart           | `xychart-beta`    | Comparisons, trends over categories   |
+| Sequence diagram    | `sequenceDiagram` | Interactions between components       |
+| Class diagram       | `classDiagram`    | OOP structures, relationships         |
+| State diagram       | `stateDiagram-v2` | State machines, lifecycles            |
+| Entity relationship | `erDiagram`       | Database schemas                      |
+| Gantt chart         | `gantt`           | Project timelines, schedules          |
+
+See the [Mermaid docs](https://mermaid.js.org/intro/) for the full syntax reference.
