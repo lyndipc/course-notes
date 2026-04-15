@@ -60,6 +60,50 @@ Follow the prompts. It creates the file and tells you what to add to the sidebar
 3. Add a new sidebar group in `astro.config.mjs`
 4. Update the `SECTIONS` array in `scripts/new-note.mjs`
 
+## Math / LaTeX Support (Optional)
+
+If your course involves math, you can enable LaTeX rendering using the [`starlight-katex`](https://github.com/stereobooster/starlight-katex) plugin. This lets you write equations directly in your markdown using `$...$` for inline math and `$$...$$` for block equations.
+
+> **Note:** The standard `remark-math` + `rehype-katex` approach that works in vanilla Astro [has known issues with Starlight](https://github.com/withastro/starlight/discussions/3455). The `starlight-katex` plugin handles all the necessary configuration automatically.
+
+**1. Install the plugin:**
+
+```bash
+npm install starlight-katex
+```
+
+**2. Update `astro.config.mjs`:**
+
+Add the import at the top of the file and the plugin to your Starlight config:
+
+```js
+import { defineConfig } from "astro/config";
+import starlight from "@astrojs/starlight";
+import { starlightKatex } from "starlight-katex";
+
+export default defineConfig({
+  integrations: [
+    starlight({
+      title: "Course Notes",
+      plugins: [starlightKatex()],
+      // ... rest of your starlight config
+    }),
+  ],
+});
+```
+
+**3. Use it in your markdown:**
+
+Write `$E = mc^2$` for inline math, or use double dollar signs for block equations:
+
+```markdown
+$$
+\int_0^\infty e^{-x^2} dx = \frac{\sqrt{\pi}}{2}
+$$
+```
+
+See the example page at `src/content/docs/notes/example.md` for more syntax examples.
+
 ## Structure
 
 ```
