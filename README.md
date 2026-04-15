@@ -104,6 +104,52 @@ $$
 
 See the example page at `src/content/docs/notes/example.md` for more syntax examples.
 
+## Diagrams / Charts with Mermaid (Optional)
+
+If your course uses diagrams, flowcharts, or charts (e.g., statistics, data structures, process flows), you can enable [Mermaid](https://mermaid.js.org/) support using the [`astro-mermaid`](https://github.com/joesaby/astro-mermaid) integration. This lets you write diagrams directly in your markdown using fenced code blocks.
+
+**1. Install the integration:**
+
+```bash
+npm install astro-mermaid
+```
+
+**2. Update `astro.config.mjs`:**
+
+Add the import at the top of the file and the integration to your Astro config. **Important:** `mermaid()` must come _before_ `starlight()` in the integrations array:
+
+```js
+import { defineConfig } from "astro/config";
+import mermaid from "astro-mermaid";
+import starlight from "@astrojs/starlight";
+
+export default defineConfig({
+  integrations: [
+    mermaid(), // ⚠️ Must come BEFORE starlight
+    starlight({
+      title: "Course Notes",
+      // ... rest of your starlight config
+    }),
+  ],
+});
+```
+
+**3. Use it in your markdown:**
+
+Write diagrams inside fenced code blocks with the `mermaid` language identifier:
+
+````markdown
+```mermaid
+pie title Favorite Languages
+    "Python" : 45
+    "JavaScript" : 30
+    "Rust" : 15
+    "Other" : 10
+```
+````
+
+The integration handles light/dark theme switching automatically. See the example page at `src/content/docs/notes/example.md` for more diagram types, and the [Mermaid docs](https://mermaid.js.org/intro/) for the full syntax reference.
+
 ## Structure
 
 ```
