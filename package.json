@@ -1,16 +1,14 @@
 {
-  "name": "course-notes-starlight",
+  "name": "american-gothic",
   "version": "1.0.0",
-  "description": "",
+  "description": "Novel planning & research notes — American Gothic",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "notes": "node scripts/new-note.mjs",
+    "new": "node scripts/new-page.mjs",
     "astro": "astro"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
   "dependencies": {
     "@astrojs/starlight": "^0.38.2",

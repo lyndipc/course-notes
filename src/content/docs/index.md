@@ -1,26 +1,51 @@
 ---
-title: "Course Notes"
-description: "Personal notes for [Course Name]"
-template: splash
-hero:
-  tagline: "Replace this with your course name and a short description"
-  actions:
-    - text: Notes
-      link: /notes/
-      icon: right-arrow
-    - text: Resources
-      link: /resources/
-      icon: right-arrow
-      variant: minimal
+title: Premise
+description: The foundation of your novel — Step 1 of the Snowflake Method
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+## Step 1 — The One-Sentence Summary
 
-<CardGrid>
-  <Card title="Notes" icon="pencil">
-    Lecture notes, readings, and key concepts.
-  </Card>
-  <Card title="Resources" icon="list-format">
-    Reference materials, formulas, and study guides.
-  </Card>
-</CardGrid>
+*Distill your entire story into a single sentence of fifteen words or fewer. No character names — use roles. This is your compass for every decision that follows.*
+
+> [Your logline here — who is your protagonist, what do they want, and what stands in their way?]
+
+---
+
+## Story Vitals
+
+| Field | Notes |
+|-------|-------|
+| **Working Title** | |
+| **Genre** | |
+| **Subgenre / Tone** | |
+| **Target Audience** | |
+| **Setting — Time** | |
+| **Setting — Place** | |
+| **Point of View** | |
+| **Estimated Length** | |
+
+---
+
+## The Moral Premise
+
+*A single statement capturing the story's thematic truth — the lesson your protagonist must learn, often expressed as a contrast.*
+
+> [e.g., "Pride leads to isolation, but humility leads to belonging."]
+
+---
+
+## Central Conflict
+
+*The one core struggle driving the entire story. Every scene should connect back to this.*
+
+[Describe the central conflict in 2–3 sentences.]
+
+---
+
+## Comparable Titles
+
+*2–3 books or films your novel resembles in tone, theme, or structure. Useful for querying and for keeping yourself anchored.*
+
+- 
+- 
+- 

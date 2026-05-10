@@ -1,50 +1,12 @@
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 32 32"
-    width="32"
-    height="32"
->
-  <!-- Notebook body -->
-  <rect
-        x="6"
-        y="3"
-        width="20"
-        height="26"
-        rx="2"
-        fill="#f1f5f9"
-        stroke="#16a34a"
-        stroke-width="1.5"
-    />
-  <!-- Spine line -->
-  <line x1="11" y1="3" x2="11" y2="29" stroke="#cbd5e1" stroke-width="1" />
-  <!-- Page lines -->
-  <line
-        x1="14"
-        y1="9"
-        x2="23"
-        y2="9"
-        stroke="#94a3b8"
-        stroke-width="1"
-        stroke-linecap="round"
-    />
-  <line
-        x1="14"
-        y1="13"
-        x2="23"
-        y2="13"
-        stroke="#94a3b8"
-        stroke-width="1"
-        stroke-linecap="round"
-    />
-  <line
-        x1="14"
-        y1="17"
-        x2="20"
-        y2="17"
-        stroke="#94a3b8"
-        stroke-width="1"
-        stroke-linecap="round"
-    />
-  <!-- Bookmark ribbon -->
-  <path d="M22 3 L22 10 L24.5 8 L27 10 L27 3" fill="#16a34a" opacity="0.8" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 36" fill="none">
+  <!-- Outer gothic pointed arch -->
+  <path d="M3 34 L3 16 C3 8 8 1 14 1 C20 1 25 8 25 16 L25 34 Z"
+        stroke="#8b1a1a" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- Inner arch -->
+  <path d="M7 34 L7 19 C7 13 10 7 14 7 C18 7 21 13 21 19 L21 34"
+        stroke="#8b1a1a" stroke-width="1" opacity="0.5"/>
+  <!-- Rose window -->
+  <circle cx="14" cy="23" r="3" stroke="#8b1a1a" stroke-width="0.9" fill="none"/>
+  <line x1="14" y1="20" x2="14" y2="26" stroke="#8b1a1a" stroke-width="0.7"/>
+  <line x1="11" y1="23" x2="17" y2="23" stroke="#8b1a1a" stroke-width="0.7"/>
 </svg>
